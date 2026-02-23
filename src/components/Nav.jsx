@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 const navLinks = [
-  { label: 'Stories', href: '#' },
-  { label: 'Impact', href: '#' },
-  { label: 'Company', href: '#' },
-  { label: 'Newsroom', href: '#' },
+  { label: 'Stories', href: '/stories' },
+  { label: 'Impact', href: '/impact' },
+  { label: 'Company', href: '/company' },
+  { label: 'Newsroom', href: '/newsroom' },
 ]
 
 function SearchIcon() {
@@ -23,14 +24,20 @@ export default function Nav() {
       role="navigation"
       aria-label="Main"
     >
-      <a href="/" className="nav__logo" aria-label="Home">
+      <Link to="/" className="nav__logo" aria-label="Home">
         <LogoMark />
-      </a>
+      </Link>
       <div className="nav__links">
         {navLinks.map(({ label, href }) => (
-          <a key={label} href={href} className="nav__link">
+          <NavLink 
+            key={label} 
+            to={href} 
+            className={({ isActive }) => 
+              `nav__link ${isActive ? 'nav__link--active' : ''}`
+            }
+          >
             {label}
-          </a>
+          </NavLink>
         ))}
         <button type="button" className="nav__icon" aria-label="Search">
           <SearchIcon />

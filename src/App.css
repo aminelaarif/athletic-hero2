@@ -51,6 +51,10 @@
   color: var(--color-text-primary);
 }
 
+.nav__link--active {
+  color: var(--color-text-primary);
+}
+
 .nav__icon {
   padding: 0.25rem;
   color: var(--color-text-primary);

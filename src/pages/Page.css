@@ -1,0 +1,46 @@
+/* Page layout styles */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2.5rem 4rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.page__content {
+  max-width: 800px;
+  width: 100%;
+}
+
+.page__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: var(--weight-light, 300);
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary, #ffffff);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.page__subtitle {
+  font-size: var(--text-body, 1.125rem);
+  color: var(--color-text-soft, rgba(255, 255, 255, 0.7));
+  margin-bottom: 2.5rem;
+  font-weight: var(--weight-medium, 500);
+}
+
+.page__body {
+  font-size: var(--text-body, 1.125rem);
+  line-height: 1.7;
+  color: var(--color-text-soft, rgba(255, 255, 255, 0.8));
+}
+
+.page__body p {
+  margin-bottom: 1.5rem;
+}
+
+.page__body p:last-child {
+  margin-bottom: 0;
+}
+
