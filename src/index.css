@@ -1,0 +1,66 @@
+/* Design tokens — Editorial Storytelling / Immersive Hero */
+:root {
+  /* Primary */
+  --color-text-primary: #ffffff;
+  --color-text-soft: rgba(255, 255, 255, 0.8);
+  --overlay-start: rgba(0, 0, 0, 0.35);
+  --overlay-end: rgba(0, 0, 0, 0.55);
+  --accent-tag-border: rgba(255, 255, 255, 0.4);
+  --accent-tag-bg: rgba(255, 255, 255, 0.08);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --text-nav: 0.75rem;
+  --text-meta: 0.8125rem;
+  --text-tag: 0.6875rem;
+  --text-hero: clamp(2.5rem, 6vw + 1rem, 4.5rem);
+
+  --letter-tight: -0.02em;
+  --line-hero: 1.08;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-primary);
+  background: #0a0a0a;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
